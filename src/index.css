@@ -1,13 +1,173 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+*{
+  box-sizing: border-box;
+  letter-spacing: .5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-family: sans-serif;
+  font-size: 14px;
+}
+body{
+  margin: 0;
+  background-color: #f3f2f1;
+}
+
+form{
+  overflow: hidden;
+}
+button:hover{
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.title{
+  position: fixed;
+  top: 20%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: 'Parisienne', cursive;
+  line-height: 1.5;
+  font-size: 5rem;
+  letter-spacing: 6px;
+  color: #27a69a;
+  width: 66%;
+  min-width: 320px;
+  transform: translateY(-100%);
+}
+
+.App{
+  min-width: 320px;
+  width: 66%;
+  box-shadow: 0 2px 3px rgba(0,0,0,.08);
+  overflow: hidden;
+  margin-bottom: 22px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: fixed;
+  top: 20%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.input-fild{
+  display: flex;
+  align-items: center;
+  margin: 0 0 2rem;
+  position: relative;
+}
+.control-label{
+  width: 25%;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #575859;
+  padding: 0.5rem 1rem 0;
+}
+
+.control-input{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.control-input:focus{
+  border-color:#00b891;
+  box-shadow: inset 0 0px 1px 1px #00b891;
+  outline: none;
+}
+.control-btn{
+  background-color: #00b891;
+  color: #fff;
+  float: right;
+  font-weight: 300;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+  border-radius: 4px;
+  user-select: none;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.control-btn:hover{
+  background-color: #26c3a1;
+}
+
+.list-wrap{
+  max-height: 100%;
+}
+
+.list{
+  max-height: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.list-item{
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  /* line-height: 3rem; */
+  /* white-space: nowrap; */
+  max-width: 100%;
+  font-size: 1rem;
+  color: #000000de;
+  padding: 1rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-btn{
+  background-color: #fff;
+  color: #00b891;
+  font-weight: 300;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.list-item-btn:hover{
+  color: #00695c;
+}
+
+.error{
+  position: absolute;
+  bottom: 0;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  left: 20%;
+  padding: 6px 12px;
+  right: 0;
+  color: #d32f2f;
+  transform: translateY(100%);
 }
